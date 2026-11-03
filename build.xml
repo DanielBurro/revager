@@ -4,8 +4,8 @@
 
 	<property environment="env" />
 	<property name="debuglevel" value="source,lines,vars" />
-	<property name="target" value="1.8" />
-	<property name="source" value="1.8" />
+	<property name="target" value="21" />
+	<property name="source" value="21" />
 
 	<property name="dir.src" location="src" />
 	<property name="dir.lib" location="lib" />
@@ -29,7 +29,7 @@
 	<property name="lib.jinput.naive" location="${dir.lib}/jinput-native-files/" />
 	<property name="lib.jutils" location="${dir.lib}/jutils-1.0.0.jar" />
 	<property name="lib.junit" location="${dir.lib.dev}/junit-4.7.jar" />
-	<property name="lib.swingx" location="${dir.lib.dev}/swingx-1.6.1.jar" />
+	<property name="lib.swingx" location="${dir.lib}/swingx-1.6.1.jar" />
 	<property name="lib.gettexttasks" location="${dir.lib.dev}/gettext-ant-tasks-0.9.7.jar" />
 	<property name="lib.launch4j.linux" location="${dir.lib.dev}/launch4j/launch4j-3.0.1-linux.tgz" />
 	<property name="lib.launch4j.windows" location="${dir.lib.dev}/launch4j/launch4j-3.0.1-win32.zip" />
@@ -46,6 +46,8 @@
 		<pathelement location="${lib.jutils}" />
 		<pathelement location="${lib.junit}" />
 		<pathelement location="${lib.swingx}" />
+		<fileset dir="${dir.lib}" includes="jakarta.*.jar,jaxb-runtime-*.jar,txw2-*.jar,istack-commons-runtime-*.jar" />
+
 	</path>
 
 	<!--                                          -->
